@@ -1,10 +1,9 @@
 import pandas as pd
 
 data = {
-    'Name': ['John', 'Alice', 'Bob', 'David'],
-    'City': ['Hyderabad', 'Chennai', 'Mumbai', 'Delhi'],
-    'Product': ['Laptop', 'Mobile', 'Laptop', 'Mobile'],
-    'Age': [21, 22, 35, 40]
+    
+    'City': ['Hyderabad', 'Chennai'],
+    'Product': ['Laptop', 'Mobile'],
 }
 
 df = pd.DataFrame(data)
@@ -14,9 +13,7 @@ print(df)
 
 city_to_country = {
     'Hyderabad': 'India',
-    'Chennai': 'India',
-    'Mumbai': 'India',
-    'Delhi': 'India'
+    'Chennai': 'India'
 }
 
 product_to_category = {
@@ -27,15 +24,9 @@ product_to_category = {
 df['Country'] = df['City'].map(city_to_country)
 df['Category'] = df['Product'].map(product_to_category)
 
-def age_group(age):
-    if age <= 25:
-        return 'Young'
-    else:
-        return 'Adult'
 
-df['Age_Group'] = df['Age'].apply(age_group)
 
-result = df[['Country', 'Category', 'Age_Group']]
+result = df[['Country', 'Category']]
 
 result = result.value_counts().reset_index(name='Count')
 
