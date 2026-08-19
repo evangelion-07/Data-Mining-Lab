@@ -1,12 +1,5 @@
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
-
-# Data Processing Techniques:
-# 1. Data Cleaning
-# 2. Data Transformation - Normalization
-# 3. Data Integration
-
-# Student data
 student_data = pd.DataFrame({
     "ID": [1, 2, 3, 4, 5],
     "Name": ["Alice", "Bob", "John", "David", "Eva"],
@@ -14,17 +7,14 @@ student_data = pd.DataFrame({
     "Marks": [85, 90, 78, None, 88]
 })
 
-# Department data
 department_data = pd.DataFrame({
     "ID": [1, 2, 3, 4, 5],
     "Department": ["CSE", "ECE", "ECE", "MECH", "CIVIL"]
 })
 
-# Display original student data
 print("Original Student Database:")
 print(student_data)
 
-# Data Cleaning
 print("\nAfter Data Cleaning:")
 
 student_data["Name"] = student_data["Name"].fillna("Unknown")
@@ -39,7 +29,6 @@ student_data["Marks"] = student_data["Marks"].fillna(
 
 print(student_data)
 
-# Data Transformation - Normalization
 print("\nAfter Normalization:")
 
 scaler = MinMaxScaler()
@@ -50,7 +39,6 @@ student_data["Marks_Normalized"] = scaler.fit_transform(
 
 print(student_data)
 
-# Data Integration
 print("\nAfter Data Integration:")
 
 merged_data = pd.merge(
