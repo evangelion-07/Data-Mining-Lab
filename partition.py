@@ -13,9 +13,6 @@ data = [
     ["106", "Frank", "IT"]
 ]
 
-# -------------------------
-# Horizontal Partitioning
-# -------------------------
 
 part1 = data[:3]
 part2 = data[3:]
@@ -26,11 +23,6 @@ print(part1)
 print("\nPartition 2:")
 print(part2)
 
-
-# -------------------------
-# Vertical Partitioning
-# -------------------------
-
 part3 = [[row[0], row[1]] for row in data]
 part4 = [[row[0], row[2]] for row in data]
 
@@ -39,11 +31,6 @@ print(part3)
 
 print("\nPartition 4 (ID, Department):")
 print(part4)
-
-
-# -------------------------
-# Round-Robin Partitioning
-# -------------------------
 
 part5 = []
 part6 = []
@@ -59,11 +46,6 @@ print(part5)
 
 print("\nPartition 6:")
 print(part6)
-
-
-# -------------------------
-# Hash Mapping
-# -------------------------
 
 part7 = []
 part8 = []
