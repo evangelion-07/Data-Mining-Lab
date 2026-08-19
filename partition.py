@@ -1,8 +1,3 @@
-# Data Partitioning
-# 1. Horizontal
-# 2. Vertical
-# 3. Round-Robin
-# 4. Hash Mapping
 
 data = [
     ["101", "Alice", "CSE"],
@@ -12,7 +7,6 @@ data = [
     ["105", "Eva", "ECE"],
     ["106", "Frank", "IT"]
 ]
-
 
 part1 = data[:3]
 part2 = data[3:]
